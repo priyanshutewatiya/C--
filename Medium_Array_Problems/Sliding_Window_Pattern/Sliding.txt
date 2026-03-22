@@ -1,0 +1,75 @@
+leetcode 209 , 713;
+Whenever you see:
+        contiguous subarray   ,  Fixed-size subarray ⇒ Sliding window.
+        fixed size exactly k
+        max/min sum/average
+
+        Think immediately:
+        Sliding Window
+
+        Not Kadane.
+
+Common Mistakes
+1. Using Kadane - Wrong because Kadane is for variable-length subarray.
+
+Use sliding window:
+first compute first window sum
+then add new element and remove old element
+
+👉 “Subarray of size k”
+👉 “Sum / Average / Max / Count”
+
+➡️ Always think:
+SLIDING WINDOW (FIXED SIZE)
+
+
+1. Fixed-size sliding window
+            Window size is already given.
+
+            Example:
+            subarray of size k
+            average of size k
+            max sum of size k
+
+            Pattern:
+            add right
+            remove left
+            size always constant
+
+2. Variable-size sliding window
+            Window size is not fixed.
+            You have to expand and shrink based on a condition.
+
+            Example:
+            smallest subarray with sum >= target
+            number of subarrays with product < k
+            longest substring without repeating characters
+
+            Pattern:
+            expand right
+            while condition breaks, shrink left
+            answer is updated dynamically
+
+            Core intuition
+            Think of window as:
+            [left ........ right]
+
+            We do 2 operations:
+
+            Expand
+            Move right forward and include new element.
+
+            Shrink
+            When condition becomes invalid or when we want a smaller valid answer, move left
+
+int left = 0;
+for(int right = 0; right < n; right++){
+    // include arr[right]
+
+    while(window_invalid_or_can_be_shrunk){
+        // remove arr[left]
+        left++;
+    }
+
+    // update answer
+}

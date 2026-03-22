@@ -1,0 +1,126 @@
+1. Is it SUBARRAY / SUBSTRING (contiguous)?
+   NO → Not sliding window / Kadane (use DP, prefix sum, etc.)
+
+   YES →
+      2. Is SIZE FIXED (k given)?
+         YES → Fixed Sliding Window
+
+         NO →
+            3. Is it asking MAX / MIN SUM?
+               YES →
+                  4. Are NEGATIVES present?
+                     YES → Kadane
+                     NO → Variable Sliding Window
+
+               NO →
+                  5. Is it COUNT / LONGEST / SMALLEST with CONDITION?
+                     YES → Variable Sliding Window
+
+
+
+
+1. Kadane’s Algorithm
+When to use?
+
+👉 Keywords:
+
+maximum sum subarray
+maximum profit
+best possible sum
+largest contiguous sum
+
+👉 Especially when:
+
+array contains negative numbers
+no fixed size
+no constraint like “sum ≤ k”
+💡 Why Kadane?
+
+Sliding window fails with negatives because:
+
+removing left element doesn’t guarantee improvement
+
+Kadane handles this by:
+restarting when sum becomes harmful
+
+LC 53 → Maximum Subarray
+LC 121 → Best Time to Buy/Sell Stock
+LC 918 → Circular subarray sum
+LC 152 → Max product subarray (modified Kadane)
+
+❌ When NOT to use Kadane
+exact sum = k ❌
+count subarrays ❌
+constraints like ≤ k ❌
+
+2. Fixed Sliding Window
+When to use?
+
+// first window
+for(int i = 0; i < k; i++) sum += arr[i];
+
+for(int i = k; i < n; i++){
+    sum += arr[i] - arr[i-k];
+}
+
+👉 Keywords:
+
+subarray of size k
+average of size k
+max/min sum of size k
+
+LC 643 → Maximum Average Subarray
+LC 1456 → Max vowels in substring of size k
+LC 1343 → 
+LC 918
+
+
+3. Variable Sliding Window
+When to use?
+
+int left = 0;
+
+for(int right = 0; right < n; right++){
+    // expand
+
+    while(invalid){
+        // shrink
+        left++;
+    }
+
+    // update answer
+}
+
+👉 Keywords:
+
+longest / shortest
+at most / at least
+sum ≤ k / ≥ k
+product < k
+substring with condition
+
+Type 1: Minimum window
+    LC 209 → min length sum ≥ target
+Type 2: Longest window
+    LC 3 → longest substring without repeat
+Type 3: Count subarrays
+    LC 713 → product < k
+
+Leetcode 209
+Leetcode 3
+Leetcode 1004
+Leetcode 424
+Leetcode 76
+
+
+Kadane → 53,121,152,918
+
+Prefix → 560,974,525,523,325
+
+Fixed → 643,1343,1456
+
+Variable → 209,3,1004,424,76
+
+Count → 713,930
+
+Exactly K → 992,1248

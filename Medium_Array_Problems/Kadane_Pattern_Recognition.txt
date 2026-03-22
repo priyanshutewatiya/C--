@@ -1,0 +1,68 @@
+| Problem Type | Technique       |
+
+| ------------ | --------------- |
+| Fixed size k | Sliding window  |
+| Exact sum K  | Prefix sum      |
+| Subsequence  | DP              |
+| Product      | Modified Kadane |
+
+
+When to use Kadane?
+
+👉 If question has:
+
+contiguous subarray
+max/min sum
+variable length
+
+
+🧪 Practice Problems
+LeetCode 53 → Maximum Subarray
+GFG → Kadane’s Algorithm
+LeetCode 53 (modified)
+Interview custom question
+LeetCode 918 → Maximum Sum Circular Subarray
+LeetCode 152 → Maximum Product Subarray
+GFG → Max sum subarray of size k
+At Least K Elements -  “length ≥ k”  - -Kadane + Sliding window
+
+2D Maximum Subarray:-
+GFG → Maximum sum rectangle
+LeetCode (premium variants)
+
+Stock Profit (Hidden Kadane) - “buy sell stock”
+“maximize profit”
+LeetCode 121 → Best Time to Buy & Sell Stock
+
+LeetCode 1186
+Maximum Difference / Gain
+पहचान differences
+gain/loss
+
+🟢 LEVEL 1 (Foundation)
+
+👉 Must solve without help
+
+53. Maximum Subarray
+121. Best Time to Buy and Sell Stock
+643. Maximum Average Subarray I
+
+🟡 LEVEL 2 (Core Variations)
+
+152. Maximum Product Subarray
+918. Maximum Sum Circular Subarray
+978. Longest Turbulent Subarray
+
+🟠 LEVEL 3 (Advanced Thinking)
+
+1186. Maximum Subarray Sum with One Deletion
+1567. Maximum Length of Subarray With Positive Product
+713. Subarray Product Less Than K
+
+🔴 LEVEL 4 (Expert / Interview Killers)
+
+363. Max Sum of Rectangle No Larger Than K
+689. Maximum Sum of 3 Non-Overlapping Subarrays
+1191. K-Concatenation Maximum Sum
+
+
