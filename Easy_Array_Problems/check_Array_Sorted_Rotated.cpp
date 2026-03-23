@@ -21,8 +21,10 @@ int main(){
     return 0;
 }
 
-// Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
+/* Given an array nums, return true if the array was originally sorted in non-decreasing order,
+ then rotated some number of positions (including zero). Otherwise, return false.
 
-// There may be duplicates in the original array.
+There may be duplicates in the original array.
 
-// Note: An array A rotated by x positions results in an array B of the same length such that B[i] == A[(i+x) % A.length] for every valid index i.
+Note: An array A rotated by x positions results in an array B of the same length such that B[i] == A[(i+x) % A.length]
+ for every valid index i.*/

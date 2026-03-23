@@ -5,14 +5,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main(){
     int arr[] = {0, 1, 0, 3, 12};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     int k = 0;
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         if(arr[i] != 0){
             swap(arr[i], arr[k]);
             k++;
@@ -20,8 +18,7 @@ int main()
     }
 
     cout << "Array after moving zeros to the end: ";
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
     return 0;
