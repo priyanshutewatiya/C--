@@ -50,8 +50,6 @@ int main(){
     }
     return 0;
 }
-
-
 /*
 Time: O(n*m)
 Space: O(1) extra, excluding answer array
