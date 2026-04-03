@@ -19,6 +19,7 @@ int main(){
 
         freq[sum]++;
     }
-    cout<<"COunt of SUbarray : " << count <<endl;
+    cout<<"COunt of SUbarray : " << count << endl;
+
     return  0;
 }
