@@ -34,12 +34,10 @@ int main() {
 
 
 /* If there exists some earlier prefix sum:
-
-sum - k
+    sum - k
 
 then:
-
-currentSum - previousSum = k
+    currentSum - previousSum = k
 
 So subarray between those indices has sum k.
 Formula
